@@ -1,0 +1,24 @@
+#Install Python and Pip
+python3 --version
+pip3 --version
+
+#Create a Project Directory
+mkdir image-encryption-cli
+cd image-encryption-cli
+
+#Create a Virtual Environment 
+python3 -m venv venv
+source venv/bin/activate
+
+#Install required Python Libraries
+pip install cryptography click
+
+#Write the script 
+nano image_encryptor.py
+
+#Run the script 
+#Encrypt an Image  
+python3 image_encryptor.py encrypt path_to_image output_encrypted_image
+
+#Decrypt an Image 
+python3 image_encryptor.py decrypt path_to_encrypted_image output_decrypted_image
